@@ -195,3 +195,73 @@ function copyText(btn){
     </power>
     <reset_button>true</reset_button>
 </neomind_hardware>
+<div style="width:200px;position:fixed;top:0;left:0;height:100%;background:#0a0a0a;padding:20px;">
+  <h3 style="color:#0ff;">NeomindAI</h3>
+  <a href="index.html" style="color:#0ff;display:block;margin:10px 0;">Home</a>
+  <a href="Arduino.html" style="color:#0ff;display:block;margin:10px 0;">Arduino</a>
+  <a href="cfml.html" style="color:#0ff;display:block;margin:10px 0;">CFML</a>
+  <a href="models.html" style="color:#0ff;display:block;margin:10px 0;">Models</a>
+  <a href="pretrain.html" style="color:#0ff;display:block;margin:10px 0;">Pretrain</a>
+  <a href="robot_brain_system.html" style="color:#0ff;display:block;margin:10px 0;">Robot Brain System</a>
+  <a href="scripts.html" style="color:#0ff;display:block;margin:10px 0;">Scripts</a>
+  <a href="src.html" style="color:#0ff;display:block;margin:10px 0;">Src</a>
+  <a href="tools.html" style="color:#0ff;display:block;margin:10px 0;">Tools</a>
+</div>
+<div style="margin-left:220px;padding:20px;">
+  <!-- Main content for the page goes here -->
+</div>
+<div class="neomind-tabs" style="max-width:900px;margin:auto;font-family:sans-serif;background:#0d0d0d;color:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 20px rgba(0,255,255,0.3);">
+    <h2 style="text-align:center;background:#0a0a0a;padding:15px;margin:0;font-size:24px;color:#00eaff;">NeomindAI Overview</h2>
+
+    <!-- Tabs -->
+    <div style="display:flex;justify-content:center;border-bottom:1px solid #222;">
+        <button class="tab-btn active" data-tab="overview" style="flex:1;padding:10px;background:#0d0d0d;color:#00eaff;border:none;cursor:pointer;">Overview</button>
+        <button class="tab-btn" data-tab="quickstart" style="flex:1;padding:10px;background:#0d0d0d;color:#ccc;border:none;cursor:pointer;">Quickstart</button>
+    </div>
+
+    <div class="tab-content" style="padding:20px;">
+        <div class="tab-panel" id="overview" style="display:block;">
+            <p>NeomindAI is a next-generation cognitive engine designed to analyze, predict, adapt, and evolve. Explore folder pages via the sidebar to see all code, diagrams, and configs.</p>
+        </div>
+        <div class="tab-panel" id="quickstart" style="display:none;">
+            <pre style="background:#111;padding:15px;border-radius:8px;">
+git clone https://github.com/QUBUHUB-incs/NeomindAI.git
+cd NeomindAI
+npm install
+npm run dev
+            </pre>
+        </div>
+    </div>
+</div>
+
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+const panels = document.querySelectorAll('.tab-panel');
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.style.display='none');
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).style.display = 'block';
+    });
+});
+</script>
+<h2>CFML Folder</h2>
+<ul>
+  <li><a href="#" onclick="openFile('Neomind.cfml')">Neomind.cfml</a></li>
+  <li><a href="#" onclick="openFile('another_file.cfml')">another_file.cfml</a></li>
+</ul>
+
+<div id="file-viewer" style="background:#111;color:#0ff;padding:15px;border-radius:8px;margin-top:10px;">
+  <!-- File content loads here -->
+</div>
+
+<script>
+function openFile(filename) {
+  fetch(`../cfml/${filename}`)
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('file-viewer').innerHTML = `<pre>${data}</pre>`;
+    });
+}
+</script>
