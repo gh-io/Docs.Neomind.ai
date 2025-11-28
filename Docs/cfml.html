@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CFML - NeomindAI</title>
+<style>
+body {margin:0;font-family:sans-serif;background:#0d0d0d;color:#fff;}
+pre{background:#111;padding:15px;border-radius:8px;overflow-x:auto;}
+a{color:#0ff;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<!-- Paste sidebar here -->
+
+<div style="margin-left:240px;padding:20px;">
+  <h2>CFML Folder</h2>
+  <ul>
+    <li><a href="#" onclick="openFile('Neomind.cfml')">Neomind.cfml</a></li>
+    <li><a href="#" onclick="openFile('another_file.cfml')">another_file.cfml</a></li>
+  </ul>
+
+  <div id="file-viewer" style="background:#111;color:#0ff;padding:15px;border-radius:8px;margin-top:10px;">
+    Click a file above to view its contents.
+  </div>
+</div>
+
+<script>
+function openFile(filename){
+  fetch(`../cfml/${filename}`)
+    .then(res=>res.text())
+    .then(data=>{
+      document.getElementById('file-viewer').innerHTML=`<pre>${data}</pre>`;
+    });
+}
+</script>
+
+</body>
+</html>
