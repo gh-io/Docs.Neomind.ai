@@ -1,182 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NeomindAI</title>
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Inter", sans-serif;
-            background: #0d0d0d;
-            color: #ffffff;
-        }
-
-        header {
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #0d0d0d;
-            position: fixed;
-            top: 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            z-index: 999;
-        }
-
-        header h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: 1px;
-        }
-
-        nav a {
-            margin-left: 20px;
-            color: #ccc;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.2s;
-        }
-        nav a:hover {
-            color: #ffffff;
-        }
-
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.85) 0%,
-                rgba(0, 0, 0, 0.95) 100%
-            );
-        }
-
-        .hero h2 {
-            font-size: 55px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #00eaff, #33c3ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin-bottom: 40px;
-            color: #cccccc;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            background: #00cfff;
-            color: #0d0d0d;
-            border: none;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .btn:hover {
-            background: #00a8d6;
-        }
-
-        .section {
-            padding: 100px 40px;
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .section h3 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .section p {
-            font-size: 18px;
-            color: #cccccc;
-            line-height: 1.7;
-        }
-
-        footer {
-            padding: 20px 40px;
-            text-align: center;
-            background: #0d0d0d;
-            color: #777;
-            font-size: 14px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeomindAI Deluxe Docs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+body { margin:0; font-family:"Inter",sans-serif; background:#0d0d0d; color:#fff; line-height:1.6; }
+header { position:fixed; top:0; width:100%; padding:20px 40px; background:#0d0d0d; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.05); z-index:999; }
+header h1{margin:0;font-size:24px;}
+nav a{margin-left:20px;color:#ccc;text-decoration:none;transition:0.2s;}
+nav a:hover{color:#00eaff;}
+section{padding:100px 40px; max-width:1000px; margin:auto;}
+h2,h3{color:#00eaff;}
+pre{background:#111;padding:20px;border-radius:8px; overflow-x:auto; position:relative;}
+.copy-btn { position:absolute; top:10px; right:10px; background:#00eaff; color:#0d0d0d; border:none; padding:5px 10px; cursor:pointer; border-radius:4px; font-size:12px; }
+button.tab-btn { background:#111; color:#00eaff; border:none; padding:10px 15px; margin:0 2px; cursor:pointer; border-radius:4px; }
+button.tab-btn.active { background:#00eaff; color:#0d0d0d; }
+.tab-content { display:none; margin-top:20px; }
+.tab-content.active { display:block; }
+img{max-width:100%;border-radius:8px;margin:20px 0;}
+a{color:#00eaff;text-decoration:none;}
+a:hover{text-decoration:underline;}
+.file-function{background:#111;padding:15px;border-radius:8px;margin:15px 0;}
+</style>
 </head>
-
 <body>
 
 <header>
-    <h1>NeomindAI</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#start">Get Started</a>
-    </nav>
+<h1>NeomindAI Deluxe Docs</h1>
+<nav>
+<a href="#tabs">Files</a>
+<a href="#start">Get Started</a>
+</nav>
 </header>
 
-<section class="hero animate__animated animate__fadeIn">
-    <h2>Think Beyond Intelligence</h2>
-    <p>NeomindAI is your gateway to next-generation cognition — 
-       an engine built to analyze, predict, adapt, and evolve with you.
-    </p>
-    <a href="#start"><button class="btn">Launch Neomind</button></a>
+<section class="hero animate__animated animate__fadeIn" style="margin-top:80px;text-align:center;">
+<h2>Neomind Deluxe Hardware Docs</h2>
+<p>All diagrams, configs, and manuals in one interactive page.</p>
 </section>
 
-<section id="about" class="section">
-    <h3>What is NeomindAI?</h3>
-    <p>
-        NeomindAI is a multi-layer artificial cognition system designed to fuse 
-        deep reasoning, dynamic memory, sensory pipelines, and autonomous decision-making. 
-        The essence is simple: an AI that not only responds — but **understands**.
-    </p>
+<section id="tabs">
+<h3>Neomind Hardware Files</h3>
+<div>
+<button class="tab-btn active" data-target="ascii">ASCII</button>
+<button class="tab-btn" data-target="cfml">CFML</button>
+<button class="tab-btn" data-target="md">Markdown</button>
+<button class="tab-btn" data-target="txt">TXT</button>
+<button class="tab-btn" data-target="png">PNG</button>
+<button class="tab-btn" data-target="pdf">PDF</button>
+</div>
+
+<!-- ASCII -->
+<div id="ascii" class="tab-content active">
+<div class="file-function"><strong>Function:</strong> Quick text-based visual reference of the board layout.</div>
+<pre>
+Neomind Board v1
++------------------------------+
+| USB PORT                     |
+| [====================]       |
+| Microcontroller ATmega328P   |
+| Digital Pins 0-13            |
+| Analog Pins A0-A5            |
+| Power Pins GND,5V,3.3V,VIN   |
+| Reset Button                 |
++------------------------------+
+<button class="copy-btn" onclick="copyText(this)">Copy</button>
+</pre>
+</div>
+
+<!-- CFML -->
+<div id="cfml" class="tab-content">
+<div class="file-function"><strong>Function:</strong> Machine-readable board configuration for Neomind engine.</div>
+<pre>
+&lt;neomind_hardware&gt;
+    &lt;name&gt;Neomind Board v1&lt;/name&gt;
+    &lt;usb_port&gt;&lt;type&gt;USB-B&lt;/type&gt;&lt;supports&gt;power, serial, firmware_upload&lt;/supports&gt;&lt;/usb_port&gt;
+    &lt;microcontroller&gt;&lt;chip&gt;ATmega328P&lt;/chip&gt;&lt;flash&gt;32KB&lt;/flash&gt;&lt;sram&gt;2KB&lt;/sram&gt;&lt;clock&gt;16MHz&lt;/clock&gt;&lt;/microcontroller&gt;
+    &lt;digital_pins count="14"&gt;&lt;pwm&gt;[3,5,6,9,10,11]&lt;/pwm&gt;&lt;serial rx="0" tx="1"/&gt;&lt;/digital_pins&gt;
+    &lt;analog_pins count="6"&gt;&lt;pins&gt;A0,A1,A2,A3,A4,A5&lt;/pins&gt;&lt;/analog_pins&gt;
+    &lt;power&gt;&lt;pins&gt;GND,5V,3.3V,VIN&lt;/pins&gt;&lt;/power&gt;
+    &lt;reset_button&gt;true&lt;/reset_button&gt;
+&lt;/neomind_hardware&gt;
+<button class="copy-btn" onclick="copyText(this)">Copy</button>
+</pre>
+</div>
+
+<!-- Markdown -->
+<div id="md" class="tab-content">
+<div class="file-function"><strong>Function:</strong> Markdown version suitable for GitHub or online docs.</div>
+<pre>
+# Neomind Board v1
++——————————+
+| USB PORT                     |
+| Microcontroller ATmega328P   |
+| Digital Pins 0-13            |
+| Analog Pins A0-A5            |
+| Power Pins GND,5V,3.3V,VIN   |
+| Reset Button                 |
++——————————+
+    <button class="copy-btn" onclick="copyText(this)">Copy</button>
+</pre>
+</div>
+
+<!-- TXT -->
+<div id="txt" class="tab-content">
+<div class="file-function"><strong>Function:</strong> Plain text for editors or quick terminal reference.</div>
+<pre>
+Neomind Board v1
++------------------------------+
+| USB PORT                     |
+| Microcontroller ATmega328P   |
+| Digital Pins 0-13            |
+| Analog Pins A0-A5            |
+| Power Pins GND,5V,3.3V,VIN   |
+| Reset Button                 |
++------------------------------+
+<button class="copy-btn" onclick="copyText(this)">Copy</button>
+</pre>
+</div>
+
+<!-- PNG -->
+<div id="png" class="tab-content">
+<div class="file-function"><strong>Function:</strong> Visual color-coded layout of board components.</div>
+<img src="data:image/png;base64,INSERT_BASE64_PNG_HERE" alt="Neomind Board PNG">
+</div>
+
+<!-- PDF -->
+<div id="pdf" class="tab-content">
+<div class="file-function"><strong>Function:</strong> Full multi-page manual with diagrams and code references.</div>
+<iframe src="data:application/pdf;base64,INSERT_BASE64_PDF_HERE" style="width:100%; height:600px; border:none;"></iframe>
+</div>
+
 </section>
 
-<section id="features" class="section">
-    <h3>Core Capabilities</h3>
-    <p>
-        • Contextual reasoning and self-adaptive logic.<br>
-        • Neural embeddings for memory compression.<br>
-        • Real-time inference with low-latency response.<br>
-        • Modular architecture for plugins and agents.<br>
-        • End-to-end encryption for data safety.<br>
-        • Integrates seamlessly with Brain AI, KPhi3, Omni-mind, and more.
-    </p>
-</section>
-
-<section id="start" class="section">
-    <h3>Get Started</h3>
-    <p>Clone the repo, install dependencies, and unleash the cognitive engine.</p>
-    <pre style="background:#111;padding:20px;border-radius:8px;text-align:left;max-width:800px;margin:auto;color:#00eaff;">
+<section id="start">
+<h3>Quickstart</h3>
+<pre>
 git clone https://github.com/QUBUHUB-incs/NeomindAI.git
 cd NeomindAI
 npm install
 npm run dev
-    </pre>
+</pre>
 </section>
 
-<footer>
-    © 2025 NeomindAI • Built by QUBUHUB • All Rights Reserved.
+<footer style="text-align:center;padding:20px;border-top:1px solid rgba(255,255,255,0.05);color:#777;">
+© 2025 NeomindAI • Built by QUBUHUB
 </footer>
+
+<script>
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
+    });
+});
+
+// Copy button
+function copyText(btn){
+    const code = btn.parentElement.textContent.replace('Copy','');
+    navigator.clipboard.writeText(code).then(()=>{ alert("Copied!"); });
+}
+</script>
 
 </body>
 </html>
