@@ -23,6 +23,23 @@ img{max-width:100%;border-radius:8px;margin:20px 0;}
 a{color:#00eaff;text-decoration:none;}
 a:hover{text-decoration:underline;}
 .file-function{background:#111;padding:15px;border-radius:8px;margin:15px 0;}
+/* Sidebar */
+.sidebar {width:220px;position:fixed;top:0;left:0;height:100%;background:#0a0a0a;padding:20px; overflow-y:auto;}
+.sidebar h3 {color:#0ff;margin-bottom:15px;}
+.sidebar a {color:#0ff;display:block;margin:10px 0;text-decoration:none;}
+.sidebar a:hover {text-decoration:underline;}
+.main {margin-left:240px;padding:20px;}
+/* Secondary Tabs */
+.neomind-tabs {max-width:900px;margin:auto;font-family:sans-serif;background:#0d0d0d;color:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 20px rgba(0,255,255,0.3); margin-bottom:40px;}
+.neomind-tabs h2 {text-align:center;background:#0a0a0a;padding:15px;margin:0;font-size:24px;color:#00eaff;}
+.neomind-tabs .tab-panel {display:none;}
+.neomind-tabs .tab-panel.active {display:block;}
+.neomind-tabs .tab-btn {flex:1;padding:10px;background:#0d0d0d;color:#ccc;border:none;cursor:pointer;}
+.neomind-tabs .tab-btn.active {color:#0d0d0d;background:#00eaff;}
+@media(max-width:768px) {
+  .sidebar {width:100%;height:auto;position:relative;}
+  .main {margin-left:0;}
+}
 </style>
 </head>
 <body>
@@ -34,6 +51,23 @@ a:hover{text-decoration:underline;}
 <a href="#start">Get Started</a>
 </nav>
 </header>
+
+<div class="sidebar">
+<h3>NeomindAI</h3>
+<a href="#tabs">Files</a>
+<a href="#start">Quickstart</a>
+<a href="#overview-section">Overview</a>
+<a href="Arduino.html">Arduino</a>
+<a href="cfml.html">CFML</a>
+<a href="models.html">Models</a>
+<a href="pretrain.html">Pretrain</a>
+<a href="robot_brain_system.html">Robot Brain System</a>
+<a href="scripts.html">Scripts</a>
+<a href="src.html">Src</a>
+<a href="tools.html">Tools</a>
+</div>
+
+<div class="main">
 
 <section class="hero animate__animated animate__fadeIn" style="margin-top:80px;text-align:center;">
 <h2>Neomind Deluxe Hardware Docs</h2>
@@ -91,15 +125,15 @@ Neomind Board v1
 <div class="file-function"><strong>Function:</strong> Markdown version suitable for GitHub or online docs.</div>
 <pre>
 # Neomind Board v1
-+——————————+
++------------------------------+
 | USB PORT                     |
 | Microcontroller ATmega328P   |
 | Digital Pins 0-13            |
 | Analog Pins A0-A5            |
 | Power Pins GND,5V,3.3V,VIN   |
 | Reset Button                 |
-+——————————+
-    <button class="copy-btn" onclick="copyText(this)">Copy</button>
++------------------------------+
+<button class="copy-btn" onclick="copyText(this)">Copy</button>
 </pre>
 </div>
 
@@ -107,6 +141,7 @@ Neomind Board v1
 <div id="txt" class="tab-content">
 <div class="file-function"><strong>Function:</strong> Plain text for editors or quick terminal reference.</div>
 <pre>
+    <p
 Neomind Board v1
 +------------------------------+
 | USB PORT                     |
@@ -117,6 +152,7 @@ Neomind Board v1
 | Reset Button                 |
 +------------------------------+
 <button class="copy-btn" onclick="copyText(this)">Copy</button>
+</p>
 </pre>
 </div>
 
@@ -134,6 +170,25 @@ Neomind Board v1
 
 </section>
 
+<div class="neomind-tabs">
+<h2>NeomindAI Overview</h2>
+<div style="display:flex;border-bottom:1px solid #222;">
+<button class="tab-btn active" data-tab="overview">Overview</button>
+<button class="tab-btn" data-tab="quickstart">Quickstart</button>
+</div>
+<div class="tab-panel active" id="overview">
+<p>NeomindAI is a next-generation cognitive engine designed to analyze, predict, adapt, and evolve. Explore folder pages via the sidebar to see all code, diagrams, and configs.</p>
+</div>
+<div class="tab-panel" id="quickstart">
+<pre style="background:#111;padding:15px;border-radius:8px;">
+git clone https://github.com/QUBUHUB-incs/NeomindAI.git
+cd NeomindAI
+npm install
+npm run dev
+</pre>
+</div>
+</div>
+
 <section id="start">
 <h3>Quickstart</h3>
 <pre>
@@ -144,109 +199,7 @@ npm run dev
 </pre>
 </section>
 
-<footer style="text-align:center;padding:20px;border-top:1px solid rgba(255,255,255,0.05);color:#777;">
-© 2025 NeomindAI • Built by QUBUHUB
-</footer>
-
-<script>
-// Tab switching
-document.querySelectorAll('.tab-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.target).classList.add('active');
-    });
-});
-
-// Copy button
-function copyText(btn){
-    const code = btn.parentElement.textContent.replace('Copy','');
-    navigator.clipboard.writeText(code).then(()=>{ alert("Copied!"); });
-}
-</script>
-
-</body>
-</html>
-<div>
-<p>
-</div>
-<neomind_hardware>
-    <name>Neomind Board v1</name>
-    <usb_port>
-        <type>USB-B</type>
-        <supports>power, serial, firmware_upload</supports>
-    </usb_port>
-    <microcontroller>
-        <chip>ATmega328P</chip>
-        <flash>32KB</flash>
-        <sram>2KB</sram>
-        <clock>16MHz</clock>
-    </microcontroller>
-    <digital_pins count="14">
-        <pwm>[3,5,6,9,10,11]</pwm>
-        <serial rx="0" tx="1"/>
-    </digital_pins>
-    <analog_pins count="6">
-        <pins>A0,A1,A2,A3,A4,A5</pins>
-    </analog_pins>
-    <power>
-        <pins>GND,5V,3.3V,VIN</pins>
-    </power>
-    <reset_button>true</reset_button>
-</neomind_hardware>
-<div style="width:200px;position:fixed;top:0;left:0;height:100%;background:#0a0a0a;padding:20px;">
-  <h3 style="color:#0ff;">NeomindAI</h3>
-  <a href="index.html" style="color:#0ff;display:block;margin:10px 0;">Home</a>
-  <a href="Arduino.html" style="color:#0ff;display:block;margin:10px 0;">Arduino</a>
-  <a href="cfml.html" style="color:#0ff;display:block;margin:10px 0;">CFML</a>
-  <a href="models.html" style="color:#0ff;display:block;margin:10px 0;">Models</a>
-  <a href="pretrain.html" style="color:#0ff;display:block;margin:10px 0;">Pretrain</a>
-  <a href="robot_brain_system.html" style="color:#0ff;display:block;margin:10px 0;">Robot Brain System</a>
-  <a href="scripts.html" style="color:#0ff;display:block;margin:10px 0;">Scripts</a>
-  <a href="src.html" style="color:#0ff;display:block;margin:10px 0;">Src</a>
-  <a href="tools.html" style="color:#0ff;display:block;margin:10px 0;">Tools</a>
-</div>
-<div style="margin-left:220px;padding:20px;">
-  <!-- Main content for the page goes here -->
-</div>
-<div class="neomind-tabs" style="max-width:900px;margin:auto;font-family:sans-serif;background:#0d0d0d;color:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 20px rgba(0,255,255,0.3);">
-    <h2 style="text-align:center;background:#0a0a0a;padding:15px;margin:0;font-size:24px;color:#00eaff;">NeomindAI Overview</h2>
-
-    <!-- Tabs -->
-    <div style="display:flex;justify-content:center;border-bottom:1px solid #222;">
-        <button class="tab-btn active" data-tab="overview" style="flex:1;padding:10px;background:#0d0d0d;color:#00eaff;border:none;cursor:pointer;">Overview</button>
-        <button class="tab-btn" data-tab="quickstart" style="flex:1;padding:10px;background:#0d0d0d;color:#ccc;border:none;cursor:pointer;">Quickstart</button>
-    </div>
-
-    <div class="tab-content" style="padding:20px;">
-        <div class="tab-panel" id="overview" style="display:block;">
-            <p>NeomindAI is a next-generation cognitive engine designed to analyze, predict, adapt, and evolve. Explore folder pages via the sidebar to see all code, diagrams, and configs.</p>
-        </div>
-        <div class="tab-panel" id="quickstart" style="display:none;">
-            <pre style="background:#111;padding:15px;border-radius:8px;">
-git clone https://github.com/QUBUHUB-incs/NeomindAI.git
-cd NeomindAI
-npm install
-npm run dev
-            </pre>
-        </div>
-    </div>
-</div>
-
-<script>
-const tabs = document.querySelectorAll('.tab-btn');
-const panels = document.querySelectorAll('.tab-panel');
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        tabs.forEach(b => b.classList.remove('active'));
-        panels.forEach(p => p.style.display='none');
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.tab).style.display = 'block';
-    });
-});
-</script>
-<h2>CFML Folder</h2>
+<h2 id="overview-section">CFML Folder</h2>
 <ul>
   <li><a href="#" onclick="openFile('Neomind.cfml')">Neomind.cfml</a></li>
   <li><a href="#" onclick="openFile('another_file.cfml')">another_file.cfml</a></li>
@@ -256,12 +209,49 @@ tabs.forEach(tab => {
   <!-- File content loads here -->
 </div>
 
+<footer style="text-align:center;padding:20px;border-top:1px solid rgba(255,255,255,0.05);color:#777;">
+© 2025 NeomindAI • Built by QUBUHUB
+</footer>
+
 <script>
+// Primary tabs
+document.querySelectorAll('#tabs .tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('#tabs .tab-btn').forEach(b=>b.classList.remove('active'));
+        document.querySelectorAll('#tabs .tab-content').forEach(c=>c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
+    });
+});
+
+// Secondary tabs
+document.querySelectorAll('.neomind-tabs .tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.neomind-tabs .tab-btn').forEach(b=>b.classList.remove('active'));
+        document.querySelectorAll('.neomind-tabs .tab-panel').forEach(p=>p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+});
+
+// Copy button
+function copyText(btn){
+    const code = btn.parentElement.textContent.replace('Copy','').trim();
+    navigator.clipboard.writeText(code).then(()=>{ alert("Copied!"); });
+}
+
+// CFML file viewer
 function openFile(filename) {
   fetch(`../cfml/${filename}`)
     .then(res => res.text())
     .then(data => {
       document.getElementById('file-viewer').innerHTML = `<pre>${data}</pre>`;
+    }).catch(e=>{
+      document.getElementById('file-viewer').innerHTML = `<pre>Error loading file: ${filename}</pre>`;
     });
 }
 </script>
+
+</div>
+</body>
+</html>
