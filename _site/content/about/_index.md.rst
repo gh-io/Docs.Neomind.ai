@@ -1,6 +1,9 @@
+---
+tittle: ![web4ai.dev](https://qubuhub-incs.github.io/NeomindAI/)
+layouts: site
+---
 
 🧠 
-
 ## Brain — The Core AI Engine of Web4 Application
 
 **Author:** Seriki Yakub (KUBU LEE)  
@@ -293,10 +296,6 @@ A **Neurobot** is essentially a robot whose “brain” isn’t just classical p
 
 Think of it as a robot that **learns, adapts, and reacts like a brain**, instead of just following pre-set commands.
 
----
-tittle: [web4ai.dev](https://qubuhub-incs.github.io/NeomindAI/)
-layouts: site
----
 
 ## **2️⃣ Brain Architecture**
 
