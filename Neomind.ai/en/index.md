@@ -1,6 +1,6 @@
 ---
-tittle: MEOMIND
-features: 
+tittle: NEOMINAI
+features: DOCS
 layouts: page
 ---
 
@@ -82,7 +82,6 @@ This project is licensed under the MIT License.
 © 2025 Seriki Yakub (KUBU LEE). All rights reserved.
 ```
 ---
-
 ## 🧩 **ARCHITECTURE.md**
 ```markdown
 # System Architecture — Brain AI Core
