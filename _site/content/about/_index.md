@@ -65,7 +65,6 @@ brain/
  ├── utils/          # Helper utilities
  └── train/          # AI training and model loading modules
 
-
 ⸻
 
 📜 License
@@ -163,6 +162,8 @@ Developers can extend the core with:
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/434924d0-570c-4c38-adb1-22381e720655" />|
 
+http://neomindai.net
+
 ---
 
 # **🧠 NEUROBOT BLUEPRINT**
@@ -228,9 +229,7 @@ We'll combine **neuromorphic principles** with AI/ML for practical robotics.
 1. Sensor data → preprocess → neural network input
 2. Neural network → decision output
 3. Output → motor/actuator commands
-4. Environment feedback → learning update
-
----
+4. Environment feedback → learning [web4.dev]       (https://github.com/QUBUHUB-incs/NeomindAI/en/)
 
 ## **5️⃣ Hardware Setup**
 
@@ -294,6 +293,9 @@ A **Neurobot** is essentially a robot whose “brain” isn’t just classical p
 
 Think of it as a robot that **learns, adapts, and reacts like a brain**, instead of just following pre-set commands.
 
+---
+tittle: [web4ai.dev](https://qubuhub-incs.github.io/NeomindAI/)
+layouts: site
 ---
 
 ## **2️⃣ Brain Architecture**
