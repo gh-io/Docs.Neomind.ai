@@ -1,4 +1,4 @@
-// Call `fetch()`, passing in the URL.
+ // Call `fetch()`, passing in the URL.
 fetch(url)
   // fetch() returns a promise. When we have received a response from the server,
   // the promise's `then()` handler is called with the response.
