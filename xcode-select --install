@@ -1,0 +1,13 @@
+  $ sudo apt-get install default-jdk dvipng ffmpeg fonts-freefont-otf \
+        imagemagick latexmk libavdevice-dev libjpeg-dev pandoc tex-gyre \
+        texlive-fonts-recommended texlive-lang-cyrillic texlive-lang-english \
+        texlive-lang-european texlive-lang-french texlive-lang-german \
+        texlive-lang-italian texlive-lang-japanese texlive-lang-polish \
+        texlive-lang-portuguese texlive-lang-spanish texlive-latex-extra \
+        texlive-luatex texlive-xetex xindy
+  $ sudo apt-get install 4ti2 clang coinor-cbc coinor-libcbc-dev fricas \
+        graphviz libfile-slurp-perl libgiac-dev libgraphviz-dev libigraph-dev \
+        libisl-dev libjson-perl libmongodb-perl libnauty-dev libperl-dev \
+        libpolymake-dev libsvg-perl libtbb-dev libterm-readkey-perl \
+        libterm-readline-gnu-perl libxml-libxslt-perl libxml-writer-perl \
+        libxml2-dev lrslib pari-gp2c pdf2svg polymake sbcl xcas
