@@ -150,3 +150,15 @@ Notes
 	•	Perfect as a Dullo-style interactive homepage.
 
 ---
+
+```c
+Sensors
+  ↓
+Sensory Cortex
+  ↓
+Decision Engine (ANN / DQN / PPO)
+  ↓
+Motor Cortex
+  ↓
+Actuators (Motors / Servos)
+  
