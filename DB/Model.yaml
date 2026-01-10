@@ -1,4 +1,4 @@
-# model.yaml is an open standard for defining cross-platform, composable AI models
+#  model.yaml is an open standard for defining cross-platform, composable AI models
 # Learn more at https://modelyaml.org
 model: qwen/qwen3-8b
 base:
