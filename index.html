@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeomindAI — Autonomous Intelligence Framework</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Syntax Highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --panel: #111;
+      --text: #ffffff;
+      --muted: #9aa0a6;
+      --accent: #00eaff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: rgba(13,13,13,0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 120px 40px 80px;
+    }
+
+    h2, h3 {
+      color: var(--accent);
+      margin-top: 60px;
+    }
+
+    p {
+      color: #e5e5e5;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    pre {
+      position: relative;
+      background: var(--panel);
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 25px 0;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+    }
+
+    th, td {
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      main { padding: 100px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>NeomindAI</h1>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav>
+      <a href="#intro">Introduction</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#sensors">Sensors</a>
+      <a href="#arduino">Arduino</a>
+      <a href="#python">Python AI</a>
+      <a href="#learning">Learning</a>
+      <a href="#deployment">Deployment</a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- sections go here -->
+  </main>
+
+</div>>
+
+<main>
+<header></header>
+  <h2>Autonomous Intelligence Framework</h2>
+  <p>
+    <strong>NeomindAI</strong> is a modular artificial intelligence framework for autonomous
+    systems, designed to connect perception, learning, and real-world execution.
+  </p>
+
+  <ul>
+    <li>Hybrid neural architectures</li>
+    <li>Reinforcement learning–driven adaptation</li>
+    <li>Deterministic motor control</li>
+    <li>Edge-first deployment</li>
+  </ul>
+
+  <h3>1. Neural Brain Architecture</h3>
+
+  <pre><code class="language-text">
+Sensors
+  ↓
+Sensory Cortex
+  ↓
+Decision Engine (ANN / DQN / PPO)
+  ↓
+Motor Cortex
+  ↓
+Actuators (Motors / Servos)
+  </code></pre>
+
+  <p>
+    High-level reasoning is handled by neural networks, while low-level execution
+    remains deterministic through microcontroller control.
+  </p>
+
+  <h3>2. Sensors & Perception</h3>
+
+  <table>
+    <tr>
+      <th>Component</th>
+      <th>Purpose</th>
+      <th>Interface</th>
+    </tr>
+    <tr>
+      <td>Camera</td>
+      <td>Vision & detection</td>
+      <td>OpenCV (Pi / Jetson)</td>
+    </tr>
+    <tr>
+      <td>LiDAR</td>
+      <td>Mapping & avoidance</td>
+      <td>ROS2 / SLAM</td>
+    </tr>
+    <tr>
+      <td>IMU</td>
+      <td>Orientation</td>
+      <td>I2C / SPI</td>
+    </tr>
+    <tr>
+      <td>Motors</td>
+      <td>Locomotion</td>
+      <td>PWM via Arduino</td>
+    </tr>
+  </table>
+
+  <h3>3. Arduino Motor Control</h3>
+
+  <pre><code class="language-cpp">
+#include &lt;Servo.h&gt;
+
+Servo leftMotor, rightMotor;
+
+void setup() {
+  leftMotor.attach(9);
+  rightMotor.attach(10);
+  Serial.begin(115200);
+}
+
+void loop() {
+  if (Serial.available()) {
+    String action = Serial.readStringUntil('\n');
+
+    if (action == "FORWARD") {
+      leftMotor.write(180);
+      rightMotor.write(0);
+    } else if (action == "STOP") {
+      leftMotor.write(90);
+      rightMotor.write(90);
+    }
+  }
+}
+  </code></pre>
+
+  <h3>4. Python AI Controller</h3>
+
+  <pre><code class="language-python">
+import torch
+import torch.nn as nn
+import serial
+
+class NeurobotANN(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc1 = nn.Linear(361, 128)
+        self.fc2 = nn.Linear(128, 4)
+
+    def forward(self, x):
+        return self.fc2(torch.relu(self.fc1(x)))
+
+ser = serial.Serial('/dev/ttyUSB0', 115200)
+model = NeurobotANN()
+
+actions = ["FORWARD", "LEFT", "RIGHT", "STOP"]
+
+while True:
+    state = torch.rand((1, 361))
+    action = actions[torch.argmax(model(state))]
+    ser.write((action + "\n").encode())
+  </code></pre>
+
+  <h3>5. Learning Algorithms</h3>
+  <ul>
+    <li>Artificial Neural Networks (ANN)</li>
+    <li>Deep Q-Learning (DQN)</li>
+    <li>Proximal Policy Optimization (PPO)</li>
+    <li>Memory modules (LSTM / GRU)</li>
+  </ul>
+
+  <h3>Deployment</h3>
+  <p>
+    NeomindAI supports Raspberry Pi, NVIDIA Jetson, desktop simulation,
+    and incremental edge deployment.
+  </p>
+
+  <footer>
+    NeomindAI · Built for Aura.web · Autonomous Intelligence Infrastructure
+  </footer>
+
+</main>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script>
+  document.querySelectorAll('pre').forEach(pre => {
+    const btn = document.createElement('button');
+    btn.innerText = 'Copy';
+    btn.className = 'copy-btn';
+    btn.onclick = () => navigator.clipboard.writeText(pre.innerText);
+    pre.appendChild(btn);
+  });
+</script>
+
+</body>
+</html>
