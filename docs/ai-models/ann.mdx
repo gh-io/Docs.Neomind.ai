@@ -1,0 +1,25 @@
+---
+
+# 📁 `docs/ai-models/ann.mdx`
+
+```mdx
+# Artificial Neural Networks (ANN)
+
+ANNs are used for perception and high-level decision-making.
+
+## Role
+- State evaluation
+- Feature abstraction
+- Action scoring
+
+## Example
+
+```python
+class NeurobotANN(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.fc1 = nn.Linear(361, 128)
+        self.fc2 = nn.Linear(128, 4)
+
+    def forward(self, x):
+        return self.fc2(torch.relu(self.fc1(x)))
