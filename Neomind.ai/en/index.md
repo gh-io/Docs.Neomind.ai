@@ -1,31 +1,28 @@
 ---
-tittle: NEOMINAI
+tittle: # [NEOMINAI neomind.ai](https://fastht.ml)
 features: DOCS
 layouts: page
 ---
 
 
-
-<h1>BRAIN</h1>
-
+<h1> BRAIN </h1>
 
 
-<h2>🧠 The Core  Engine </h2>
+
+<h2> 🧠 The Core  Engine </h2>
 
  
 **Author:** Seriki Yakub (KUBU LEE)  
-**Language:** Python  
-**Version:** 1.0.0  
-**License:** MIT  
+***Language:***   
+***Version:*** 1
+***License:***   
 
 ---
-
 <p>
-	
+
 ## 🧩 Overview
 **Brain** is a modular, Python-based AI engine designed to simulate cognitive reasoning, adaptive memory, and learning behavior.  
 It acts as the *core neural logic layer* for Web4 Application projects — powering analytics, automation, and intelligent decision-making.
-
 The architecture emphasizes scalability, modularity, and clean data flow — bridging human-like reasoning with machine-level precision.
 
 ---
@@ -41,38 +38,38 @@ The architecture emphasizes scalability, modularity, and clean data flow — bri
 ---
 
 ## 🚀 Installation
-
-
-git clone https://github.com/Web4application/Brain.git
+```
+git clone 
+https://github.com/Web4application/Brain.git
 cd Brain
 python -m venv venv
 source venv/bin/activate  # (Windows: venv\Scripts\activate)
 pip install -r requirements.txt
-
+```
 
 ⸻
 
 🧰 Usage Example
-
+```py
 from brain.core import BrainCore
 
 brain = BrainCore()
 response = brain.think("What is consciousness?")
 print(response)
-
+```
 Output:
 
 "Consciousness is the reflection of perception shaped by experience."
-
 Project Structure:
 
+```code
 brain/
  ├── core/           # Core reasoning and neural engine
  ├── memory/         # Storage, recall, and caching system
  ├── api/            # Optional FastAPI endpoints
  ├── utils/          # Helper utilities
  └── train/          # AI training and model loading modules
-
+```
 
 ⸻
 
@@ -80,8 +77,8 @@ brain/
 
 This project is licensed under the MIT License.
 © 2025 Seriki Yakub (KUBU LEE). All rights reserved.
-```
 ---
+
 ## 🧩 **ARCHITECTURE.md**
 ```markdown
 # System Architecture — Brain AI Core
@@ -108,18 +105,14 @@ It operates through four key layers:
 ---
 
 ## 🔄 Data Flow
-
-**Input → Reasoning Engine → Memory → Response → (Feedback → Retraining)**
-
----
+`**Input → Reasoning Engine → Memory → Response → (Feedback → Retraining)**`
 
 ## ⚙️ Technologies
-- **Python 3.11+**
-- **FastAPI** (optional API)
-- **Redis / PostgreSQL** (optional for persistence)
-- **NumPy / PyTorch** (for AI expansion)
-- **Docker + GitHub Actions** (for deployment and CI/CD)
-
+- ***Python 3.11+***
+- ***FastAPI.ai*** (optional API)
+- ***Redis / PostgreSQL*** (optional for persistence)
+- ***NumPy / PyTorch*** (for AI expansion)
+- ***Docker + GitHub Actions*** (for deployment and CI/CD)`  
 ---
 
 ## 🧩 Scalability
@@ -142,9 +135,11 @@ Developers can extend the core with:
 ---
 
 
-<h2
- BRAIN
+<h2>
+# BRAIN
 
+[neomind.ai](https://fastht.ml)
+```
 
                  ┌──────────────┐
                  │  Sensory     │  ← Camera, LiDAR, IMU, Distance, Touch
@@ -166,13 +161,12 @@ Developers can extend the core with:
         ▼                               ▼
      Wheels / Motors                 Servo Arms / Grippers
      LED Feedback / Sounds           Optional Drone    Propellers
-
-
+```
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/434924d0-570c-4c38-adb1-22381e720655" />|
 
 ---
-
+``
 <p> # **🧠 NEUROBOT BLUEPRINT**</p>
 
 
@@ -202,9 +196,11 @@ We'll combine **neuromorphic principles** with AI/ML for practical robotics.
 <p> 2️⃣ Sensors (Perception System)**</p>
 
 
-```bash
-----
- | Sensor Type                     | Purpose               | Notes                                   |
+```
+[neominai.io]
+(https://fastht.ml)
+
+| Sensor Type                     | Purpose               | Notes                                   |
     | ------------------------------- | --------------------- | --------------------------------------- |
     | Camera (RGB & depth)            | Vision                | Object detection, mapping, navigation   |
     | Microphone array                | Sound                 | Voice commands, environmental awareness |
@@ -213,10 +209,9 @@ We'll combine **neuromorphic principles** with AI/ML for practical robotics.
     | Pressure & tactile              | Touch feedback        | Grasping, detecting collisions          |
     | Temperature / gas sensors       | Environmental         | Safety / monitoring                     |
 
-
+```
 
 Sensors feed into the **Sensory Cortex Module**, which preprocesses inputs before the “brain” sees them.
-```
 ---
 
 ## **3️⃣ Actuators (Motor System)**
@@ -269,7 +264,7 @@ Sensors feed into the **Sensory Cortex Module**, which preprocesses inputs befor
 
 **Example Control Flow:**
 
-```text
+```py
 Sensor Input -> Preprocessing -> Neural Network Decision -> Actuator Command -> Feedback -> Update Weights
 ```
 
@@ -373,7 +368,7 @@ These feed the neural network, which decides what to do next.
 
 # **🗂 Neurobot ROS2 + SLAM Module**
 
-```
+```code
 Neurobot/
 ├── ros2/
 │   ├── launch/
@@ -392,7 +387,7 @@ Neurobot/
 
 ## **1️⃣ ROS2 Launch File** (`ros2/launch/neurobot_slam.launch.py`)
 
-```python
+``` python
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
@@ -430,7 +425,7 @@ def generate_launch_description():
 
 ## **2️⃣ LiDAR Node** (`ros2/nodes/lidar_node.py`)
 
-```python
+``` python
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
@@ -462,7 +457,7 @@ if __name__ == '__main__':
 
 ## **3️⃣ Motor Node (Arduino Command Subscriber)** (`ros2/nodes/motor_node.py`)
 
-```python
+``` python
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
@@ -495,7 +490,7 @@ if __name__ == '__main__':
 
 ## **4️⃣ Swarm Node** (`ros2/nodes/swarm_node.py`)
 
-```python
+``` python
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
@@ -541,7 +536,7 @@ sudo apt install ros-<ros2-distro>-rtabmap-ros
 
 **Launch Example**:
 
-```bash
+```py
 ros2 launch rtabmap_ros rtabmap.launch.py \
     rgb_topic:=/camera/color/image_raw \
     depth_topic:=/camera/depth/image_raw \
@@ -554,7 +549,7 @@ ros2 launch rtabmap_ros rtabmap.launch.py \
 
 ## **6️⃣ Workflow Overview**
 
-```
+```code
 [LiDAR / Camera / IMU Sensors] ---> ROS2 Nodes ---> SLAM Mapping
                                |
                                v
@@ -570,9 +565,10 @@ ros2 launch rtabmap_ros rtabmap.launch.py \
                          Swarm Node <---> Other Neurobots
 ```
 
-* Each Neurobot runs **local SLAM** and shares **partial maps** via MQTT or ROS2 topics.
+* Each Neurobot runs
+* ***local SLAM*** and shares **partial maps** via MQTT or ROS2 topics.
 
-**ANN + RL makes **high-level decisions**, SNN handles **reflexive control**.
+**ANN + RL makes ***high-level decisions***, SNN handles **reflexive control**.
 
 
 * Motors receive commands from **motor_node**, sensors feed **real-time data**, swarm node synchronizes multiple robots.
@@ -588,7 +584,7 @@ ros2 launch rtabmap_ros rtabmap.launch.py \
 
 # **🗂 Neurobot Starter Package Structure & Files**
 
-```
+```code
 Neurobot/
 ├── arduino/
 │   └── motor_control.ino
@@ -616,8 +612,6 @@ Neurobot/
 ├── main.py
 ├── requirements.txt
 └── README.md
----
- 
 Brain/
 ├── cfml/
 │   ├── Application.cfc
@@ -639,7 +633,7 @@ Brain/
 
 ### **1️⃣ Arduino: `arduino/motor_control.ino`**
 
-     ```cpp
+```cpp
 #include <Servo.h>
 
 Servo leftMotor, rightMotor;
@@ -713,7 +707,7 @@ class ReflexSNN(nn.Module):
 
 **`sensors/lidar_reader.py`**
 
-    ```python
+ ```python
 import numpy as np
 
 def read_lidar():
@@ -760,7 +754,7 @@ def read_camera():
 
 ### **5️⃣ Swarm: `swarm/mqtt_comm.py`**
 
-    ```python
+ ```python
 import paho.mqtt.client as mqtt
 
 MQTT_BROKER = "192.168.1.100"
@@ -773,8 +767,7 @@ def publish_state(position, obstacles):
     client.publish("neurobot/swarm", json.dumps(msg))
 ```
 ---
-```
-### **6️⃣ Main Integration Script: `main.py`**
+### ***6️⃣ Main Integration Script: `main.py`***
 
 ```python
 import serial
@@ -821,7 +814,7 @@ except KeyboardInterrupt:
 
 **`ros2/launch/neurobot_slam.launch.py`**
 
-    ```python
+```python
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
@@ -842,7 +835,7 @@ def generate_launch_description():
 
 ### **8️⃣ Python Dependencies: `requirements.txt`**
 
-```
+```-r requirements
 torch
 torchvision
 numpy
@@ -869,13 +862,7 @@ zip -r Neurobot.zip Neurobot/
 pre-filled SLAM map + example 3-Neurobot swarm configuration** 
 
 ---
-
-
-
-
-
-
-
+```py
 import zipfile
 import os
 
@@ -885,15 +872,14 @@ os.makedirs(docs_folder, exist_ok=True)
 
 docs_content = {
     "README.md": """# Brain — The Core AI Engine of Web4 Application
-
+```
 **Author:** Seriki Yakub (KUBU LEE)  
 **Language:** Python  
 **Version:** 1.0.0  
 **License:** MIT  
-
 ---
 
-## 🧩 Overview
+## 🧩 [Overview](https://neomind.ai)
 **Brain** is a modular, Python-based AI engine designed to simulate cognitive reasoning, adaptive memory, and learning behavior.  
 It acts as the *core neural logic layer* for Web4 Application projects — powering analytics, automation, and intelligent decision-making.
 
@@ -907,6 +893,8 @@ It acts as the *core neural logic layer* for Web4 Application projects — power
 - ⚡ Lightweight FastAPI interface (optional)  
 - 🧩 Extendable for Web4AI, RODAAI, and Fadaka Blockchain
 
+[neomind.ai]
+(https://fastht.ml)
 ---
 
 ## 🚀 Installation
@@ -935,7 +923,7 @@ print(response)
 
 ## 🧩 Project Structure
 
-```
+```code
 brain/
  ├── core/
  ├── memory/
@@ -1004,8 +992,8 @@ python main.py
 
 ## 🐳 Docker Setup
 ```bash
-docker build -t web4-brain .
-docker run -p 8000:8000 web4-brain
+docker build -t neomindai-brain .
+docker run -p 8000:8000 neomindai-brain
 ```
 
 ## ⚙️ CI/CD
@@ -1037,7 +1025,7 @@ pytest
 All contributions under MIT License.
 """
 }
-
+```
 # Write files
 for name, content in docs_content.items():
     with open(os.path.join(docs_folder, name), "w") as f:
@@ -1048,7 +1036,7 @@ zip_path = "/mnt/data/Brain_Docs.zip"
 with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
     for name in docs_content.keys():
         zipf.write(os.path.join(docs_folder, name), arcname=name)
-
+```
 
 
 Perfect! Let’s lay out all 5 documentation files for your Brain repo. You can copy each directly into your repo.
@@ -1094,14 +1082,14 @@ pip install -r requirements.txt
 ⸻
 
 🧰 Usage Example
-
+```
 from brain.core import BrainCore
 
 brain = BrainCore()
 response = brain.think("What is consciousness?")
 print(response)
 
-
+```
 ⸻
 
 🧩 Project Structure
@@ -1340,8 +1328,7 @@ Located at .github/workflows/deploy.yml
 ---
 
 ## 🤝 **CONTRIBUTING.md**
-
-    ```markdown
+  ```markdown
 # Contributing to Brain
 
 Thanks for helping make Brain smarter 🧠
@@ -1351,6 +1338,7 @@ Thanks for helping make Brain smarter 🧠
 ## 💡 How to Contribute
 1. Fork the repository  
 2. Create a feature branch:  
+```
 
        ```bash
    git checkout -b feature/amazing-feature
@@ -1383,3 +1371,5 @@ By contributing, you agree that your code will be licensed under the MIT License
 <p>
 </body>
 </html>
+
+		https://neomindai.io/llms.txt
