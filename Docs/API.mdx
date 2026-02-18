@@ -4,7 +4,7 @@
 
 
 
-## OpenAPI
+## API
 
 ````yaml en/api-reference/openapi_knowledge.json post /datasets/{dataset_id}/document/create-by-file
 openapi: 3.0.1
@@ -15,11 +15,11 @@ info:
     including creation, retrieval, and configuration.
   version: 1.0.0
 servers:
-  - url: '{apiBaseUrl}'
+  - url: '{neomind.ai}'
     description: The base URL for the Knowledge API.
     variables:
       apiBaseUrl:
-        default: https://api.dify.ai/v1
+        default: https://api.neomind.ai/v1
         description: Actual base URL of the API
 security:
   - ApiKeyAuth: []
@@ -205,4 +205,4 @@ components:
 
 ---
 
-> To find navigation and other pages in this documentation, fetch the llms.txt file at: https://docs.dify.ai/llms.txt
+> To find navigation and other pages in this documentation, fetch the llms.txt file at: https://docs.neomind.ai/llms.txt
