@@ -1,0 +1,25 @@
+{
+  "document": {
+    "id": "3c90c3cc-0d44-4b50-8888-8dd25736052a",
+    "position": 123,
+    "data_source_type": "<string>",
+    "data_source_info": {},
+    "dataset_process_rule_id": "3c90c3cc-0d44-4b50-8888-8dd25736052a",
+    "name": "<string>",
+    "created_from": "<string>",
+    "created_by": "3c90c3cc-0d44-4b50-8888-8dd25736052a",
+    "created_at": 123,
+    "tokens": 123,
+    "indexing_status": "<string>",
+    "error": "<string>",
+    "enabled": true,
+    "disabled_at": 123,
+    "disabled_by": "3c90c3cc-0d44-4b50-8888-8dd25736052a",
+    "archived": true,
+    "display_status": "<string>",
+    "word_count": 123,
+    "hit_count": 123,
+    "doc_form": "<string>"
+  },
+  "batch": "<string>"
+}

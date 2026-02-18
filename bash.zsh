@@ -185,3 +185,11 @@ npm -v # Should print "11.6.1".
 
 curl -X POST http://localhost:8000/upload-data -H "Content-Type: application/json" \
 -d '[{"text": "NeoMind learns patterns fast", "label": "AI"}, {"text": "Training makes me smarter", "label": "AI"}]'
+git clone https://github.com/QUBUHUB-incs/NeomindAI.git
+cd NeomindAI
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt  # If exists
+
+pip install torch numpy matplotlib opencv-python
